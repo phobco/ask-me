@@ -8,7 +8,7 @@ gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
 gem 'jbuilder', '~> 2.7'
-# Validate emails
+# Validate emails string
 gem 'valid_email2'
 
 group :development, :test do
