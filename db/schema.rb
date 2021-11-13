@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_10_213200) do
+ActiveRecord::Schema.define(version: 2021_11_13_202207) do
 
   create_table "questions", force: :cascade do |t|
     t.string "text"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 2021_11_10_213200) do
     t.string "avatar_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
   add_foreign_key "questions", "users"
