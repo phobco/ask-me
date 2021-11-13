@@ -1,9 +1,9 @@
-require 'openssl'
+require 'uri'
 
 class User < ApplicationRecord
   ITERATIONS = 20_000
   DIGEST = OpenSSL::Digest::SHA256.new
-  USERNAME_VALIDATION_REGEX = /\A[A-z\d_]+\z/
+  USERNAME_VALIDATION_REGEX = /\A[\w]+\z/
 
   attr_accessor :password
 
@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   validates :email, :username, presence: true
   validates :email, :username, uniqueness: true
-  validates :email, 'valid_email_2/email': true
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
   
   validates :password, presence: true, on: :create
   validates :password, confirmation: true
@@ -36,11 +36,11 @@ class User < ApplicationRecord
     user if user.password_hash == hashed_password
   end
 
-  private
-
   def self.hash_to_string(password_hash)
     password_hash.unpack('H*')[0]
   end
+
+  private
 
   def encrypt_password
     if password.present?
