@@ -3,7 +3,7 @@ require 'uri'
 class User < ApplicationRecord
   ITERATIONS = 20_000
   DIGEST = OpenSSL::Digest::SHA256.new
-  USERNAME_VALIDATION_REGEX = /\A[\w]+\z/
+  USERNAME_VALIDATION_REGEX = /\A\w+\z/
 
   attr_accessor :password
 
