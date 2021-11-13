@@ -19,7 +19,7 @@ class User < ApplicationRecord
   validates :username, length: { maximum: 40 }
   validates :username,format: { with: USERNAME_VALIDATION_REGEX }
 
-  before_validation :username_downcase
+  before_validation :username_downcase, :email_downcase
   before_save :encrypt_password
 
   def self.authenticate(email, password)
@@ -55,8 +55,14 @@ class User < ApplicationRecord
   end
 
   def username_downcase
-    return unless username.present?
+    if self&.username
+      self.username.downcase!
+    end    
+  end
 
-    self.username = username.downcase
+  def email_downcase
+    if self&.email
+      self.email.downcase!
+    end    
   end
 end
