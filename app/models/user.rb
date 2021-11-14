@@ -16,8 +16,7 @@ class User < ApplicationRecord
   validates :password, presence: true, on: :create
   validates :password, confirmation: true
 
-  validates :username, length: { maximum: 40 }
-  validates :username,format: { with: USERNAME_VALIDATION_REGEX }
+  validates :username, length: { maximum: 40 }, format: { with: USERNAME_VALIDATION_REGEX }
 
   before_validation :username_downcase, :email_downcase
   before_save :encrypt_password
@@ -54,15 +53,11 @@ class User < ApplicationRecord
     end
   end
 
-  def username_downcase
-    if self&.username
-      self.username.downcase!
-    end    
+  def username_downcase  
+    username&.downcase!   
   end
 
   def email_downcase
-    if self&.email
-      self.email.downcase!
-    end    
+    email&.downcase!   
   end
 end
