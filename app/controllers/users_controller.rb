@@ -15,5 +15,8 @@ class UsersController < ApplicationController
     @questions = @user.questions.order(created_at: :desc)
 
     @new_question = Question.new
+
+    @answers = @user.questions.count(&:answer)
+    @unanswered_questions = @questions.size - @answers
   end
 end
