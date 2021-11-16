@@ -1,0 +1,13 @@
+ru:
+  question:
+    zero: 'Вопросов ещё нет'
+    one: '%{count} вопрос'
+    few: '%{count} вопроса'
+    many: '%{count} вопросов'
+    other: 'вопросы'
+  answer:
+    zero: 'Ответов ещё нет'
+    one: '%{count} ответ'
+    few: '%{count} ответа'
+    many: '%{count} ответов'
+    other: 'ответы'
