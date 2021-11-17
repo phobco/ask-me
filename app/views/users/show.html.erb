@@ -43,8 +43,8 @@
   <div class="user-questions buffer-both">
     <div>
       <p class="text-medium"><%= t(:question, count: @questions.size) %></p>
-      <p class="text-small"><%= t(:answer, count: @answers) %></p>
-      <p class="text-small"><%= t(:unanswered, count: @unanswered_questions) %></p>
+      <p class="text-small"><%= t(:answer, count: @answers_number) %></p>
+      <p class="text-small"><%= t(:unanswered, count: @unanswered_questions_number) %></p>
     </div>
     <div class="questions-list">
       <% @questions.each do |question| %>
