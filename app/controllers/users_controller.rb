@@ -36,8 +36,8 @@ class UsersController < ApplicationController
 
     @new_question = @user.questions.build
 
-    @answers = @user.questions.count(&:answer)
-    @unanswered_questions = @questions.size - @answers
+    @answers_number = @user.questions.count(&:answer)
+    @unanswered_questions_number = @questions.size - @answers_number
   end
 
   private
