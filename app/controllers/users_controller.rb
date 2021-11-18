@@ -49,7 +49,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy if @user.id == current_user.id
 
-    redirect_to root_path, notice: 'Ваш аккаунт удалён :('
+    redirect_to root_path, notice: 'Ваш аккаунт был удалён :('
   end
 
   private
