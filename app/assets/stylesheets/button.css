@@ -19,6 +19,12 @@
   color: #fff;
 }
 
+.button-red {
+  background: #ffffff00;
+  color: rgb(216, 25, 25);
+  padding: 1px;
+}
+
 .button-light {
   background: #00948a;
   color: #fff;

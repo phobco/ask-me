@@ -62,6 +62,10 @@
   width: 33.33%;
 }
 
+.delete {
+  float: right;
+}
+
 @media (max-width: 960px) {
   .column-3-4,
   .column-1-4,

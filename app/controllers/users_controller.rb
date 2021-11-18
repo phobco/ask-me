@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to user_path(@user), notice: 'Данные обновлены'
     else
-      render 'edit'
+      render :edit
     end
   end
 
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path, notice: "Добро пожаловать, #{@user.name}!"
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -44,6 +44,12 @@ class UsersController < ApplicationController
 
     @answers_number = @user.questions.count(&:answer)
     @unanswered_questions_number = @questions.size - @answers_number
+  end
+
+  def destroy
+    @user.destroy if @user.id == current_user.id
+
+    redirect_to root_path, notice: 'Ваш аккаунт удалён :('
   end
 
   private
