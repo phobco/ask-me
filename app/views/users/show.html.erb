@@ -14,9 +14,26 @@
   <h2 class="title-small buffer-both">
     @<%= @user.username %>
   </h2>
+</div>
 
+<div class="user-details">
   <div class="user-ask-button container text-center">
     <%= link_to "Спроси меня", '', class: 'button button-light', id: 'ask-button' %>
+  </div>
+
+  <div class="user-statistics container text-center">
+    <div class="column-1-3">
+      <h1 class="title-small"><%= @questions.size %></h1>
+      <p><%= t(:question, count: @questions.size) %></p>
+    </div>
+    <div class="column-1-3">
+      <h1 class="title-small"><%= @answers_number %></h1>
+      <p><%= t(:answer, count: @answers_number) %></p>
+    </div>
+    <div class="column-1-3">
+      <h1 class="title-small"><%= @unanswered_questions_number %></h1>
+      <p><%= t(:unanswered, count: @unanswered_questions_number) %></p>
+    </div>
   </div>
 </div>
 
@@ -41,11 +58,6 @@
 
 <div class="column-3-4">
   <div class="user-questions buffer-both">
-    <div>
-      <p class="text-medium"><%= t(:question, count: @questions.size) %></p>
-      <p class="text-small"><%= t(:answer, count: @answers_number) %></p>
-      <p class="text-small"><%= t(:unanswered, count: @unanswered_questions_number) %></p>
-    </div>
     <div class="questions-list">
       <% @questions.each do |question| %>
         <%= render partial: 'questions/question', object: question %>
