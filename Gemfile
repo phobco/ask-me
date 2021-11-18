@@ -8,6 +8,11 @@ gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
 gem 'rails-i18n', '~> 6.0.0'
+gem 'uglifier'
+
+group :production do
+  gem 'pg'
+end
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
