@@ -28,6 +28,21 @@
         <%= f.text_field :avatar_url, class: 'form-text-field' %>
       </div>
 
+      <div>
+        <%= f.label 'Цвет фона:', class: 'text-medium' %>
+        <select name="user[background_color]">
+            <option value="<%= @user.background_color %>">Выбрать...</option>
+            <option value="#005a55">Стандартный</option>
+            <option value="#D03B29">Коралловый</option>
+            <option value="#845EC2">Фиолетовый</option>
+            <option value="#4B4453">Тёмный</option>
+            <option value="#B0A8B9">Серый</option>
+            <option value="#00896F">Зелёный</option>
+            <option value="#008BC9">Светло-синий</option>
+            <option value="#DCB0FF">Светло-фиолетовый</option>
+          </select>
+      </div>
+
       <div class="buffer-top-large buffer-bottom">
         Если не хотите менять пароль — оставьте эти поля пустыми!
       </div>
