@@ -30,7 +30,7 @@
 
       <div>
         <%= f.label 'Цвет фона:', class: 'text-medium' %>
-        <%= f.color_field :background_color, value: @user.background_color %>
+        <%= f.text_field :background_color, value: @user.background_color, data: { jscolor: '{}' } %>
       </div>
 
       <div class="buffer-top-large buffer-bottom">
