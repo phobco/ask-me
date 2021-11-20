@@ -3,15 +3,9 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-require('packs/jscolor')
+import 'packs/scripts/jscolor'
+import 'packs/scripts/toggle'
 
 import Rails from "@rails/ujs"
 
 Rails.start()
-
-$(function(){
-  $('#ask-button').click(function(){
-      $('#ask-form').slideToggle(300);
-      return false;
-  });
-});
