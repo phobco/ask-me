@@ -47,7 +47,10 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user.destroy if @user.id == current_user.id
+    if @user.id == current_user.id
+      @user.questions.destroy_all
+      @user.destroy
+    end
 
     redirect_to root_path, notice: 'Ваш аккаунт был удалён :('
   end
