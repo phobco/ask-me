@@ -1,4 +1,14 @@
 ru:
+  activerecord:
+    attributes:
+      user:
+        username: 'Никнейм'
+        name: 'Имя пользователя'
+        avatar_url: 'URL аватарки'
+        background_color: 'Цвет фона'
+        password_info: 'Если не хотите менять пароль — оставьте эти поля пустыми!'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
   question:
     zero: 'вопросов'
     one: 'вопрос'
