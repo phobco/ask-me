@@ -2,28 +2,30 @@ ru:
   activerecord:
     attributes:
       user:
-        username: 'Никнейм'
-        name: 'Имя пользователя'
-        avatar_url: 'URL аватарки'
-        background_color: 'Цвет фона'
-        password_info: 'Если не хотите менять пароль — оставьте эти поля пустыми!'
-        password: 'Пароль'
-        password_confirmation: 'Подтверждение пароля'
+        username: Никнейм
+        name: Имя пользователя
+        avatar_url: URL аватарки
+        background_color: Цвет фона
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+  forms:
+    views:
+      password_info: Если не хотите менять пароль — оставьте эти поля пустыми!
   question:
-    zero: 'вопросов'
-    one: 'вопрос'
-    few: 'вопроса'
-    many: 'вопросов'
-    other: 'вопросы'
+    zero: вопросов
+    one: вопрос
+    few: вопроса
+    many: вопросов
+    other: вопросы
   answer:
-    zero: 'ответов'
-    one: 'ответ'
-    few: 'ответа'
-    many: 'ответов'
-    other: 'ответы'
+    zero: ответов
+    one: ответ
+    few: ответа
+    many: ответов
+    other: ответы
   unanswered:
-    zero: 'неотвеченных'
-    one: 'неотвеченный'
-    few: 'неотвеченных'
-    many: 'неотвеченных'
-    other: 'неотвеченные'
+    zero: неотвеченных
+    one: неотвеченный
+    few: неотвеченных
+    many: неотвеченных
+    other: неотвеченные
