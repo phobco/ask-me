@@ -48,7 +48,6 @@ class UsersController < ApplicationController
 
   def destroy
     if @user.id == current_user.id
-      @user.questions.destroy_all
       @user.destroy
     end
 
