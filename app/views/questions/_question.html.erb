@@ -15,8 +15,8 @@
       <%= l(question.created_at, format: :short) %>
     </div>
     
-    <% if question.author_id.present? %>
-      <p>от: <%= link_to "@#{User.find(question.author_id).username}", user_path(question.author_id) %></p>
+    <% if question.author.present? %>
+      <p>от: <%= link_to "@#{question.author.username}", user_path(question.author_id) %></p>
     <% end %>
   </div>
 
