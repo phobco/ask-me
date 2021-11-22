@@ -48,6 +48,7 @@ class UsersController < ApplicationController
 
   def destroy
     if @user.id == current_user.id
+      session[:user_id] = nil
       @user.destroy
     end
 
