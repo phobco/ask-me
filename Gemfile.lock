@@ -85,6 +85,7 @@ GEM
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
     pg (1.2.3)
+    public_suffix (4.0.6)
     puma (5.5.2)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -155,6 +156,9 @@ GEM
       concurrent-ruby (~> 1.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
+    validate_url (1.0.13)
+      activemodel (>= 3.0.0)
+      public_suffix
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -184,6 +188,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   sqlite3 (~> 1.4)
   uglifier
+  validate_url
   web-console (>= 4.1.0)
   webpacker (~> 5.0)
 
