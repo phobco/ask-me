@@ -72,6 +72,7 @@ GEM
       activesupport (>= 5.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
+    json (2.6.1)
     loofah (2.12.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -131,6 +132,8 @@ GEM
       rake (>= 0.13)
       thor (~> 1.0)
     rake (13.0.6)
+    recaptcha (5.8.1)
+      json
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -185,6 +188,7 @@ DEPENDENCIES
   rails (~> 6.1.4, >= 6.1.4.1)
   rails-i18n (~> 6.0.0)
   rails_12factor
+  recaptcha
   sass-rails (>= 6)
   sqlite3 (~> 1.4)
   uglifier

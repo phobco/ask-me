@@ -11,6 +11,7 @@ gem 'rails-i18n', '~> 6.0.0'
 gem 'uglifier'
 gem 'rails_12factor'
 gem "validate_url"
+gem "recaptcha"
 
 group :production do
   gem 'pg'
