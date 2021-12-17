@@ -14,7 +14,13 @@
     <div class="question-date">
       <%= l(question.created_at, format: :short) %>
     </div>
-    
+
+    <div class="buffer-top">
+      <% question.hashtags.each do |hashtag| %>
+        <%= link_to hashtag.text, hashtag_path(hashtag) %>
+      <% end %>
+    </div>
+
     <% if question.author.present? %>
       <p>от: <%= link_to "@#{question.author.username}", user_path(question.author_id) %></p>
     <% end %>

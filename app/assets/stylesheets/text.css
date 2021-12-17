@@ -18,6 +18,13 @@ a {
   margin-bottom: 12px;
 }
 
+.title-medium-white {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: white;
+}
+
 .title-small {
   font-size: 20px;
   margin-bottom: 6px;
