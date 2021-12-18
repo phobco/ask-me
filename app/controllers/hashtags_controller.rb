@@ -1,13 +1,6 @@
 class HashtagsController < ApplicationController
-  before_action :set_hashtag, only: [:show]
-
   def show
-    @questions = @hashtag.questions.order(created_at: :desc)
-  end
-
-  private
-
-  def set_hashtag
-    @hashtag = Hashtag.find(params[:id])
+    @hashtag = Hashtag.find_by(text: params[:text])
+    @questions = @hashtag.questions.sorted
   end
 end

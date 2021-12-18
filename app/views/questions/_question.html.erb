@@ -2,7 +2,7 @@
   <div class="question-content">
     
     <div class="question-text text-lead">
-      <%= question.text %>
+      <%= make_hashtags_clickable(question.text) %>
     </div>
 
     <% if question.answer.present? %>
@@ -17,7 +17,7 @@
 
     <div class="buffer-top">
       <% question.hashtags.each do |hashtag| %>
-        <%= link_to hashtag.text, hashtag_path(hashtag) %>
+        <%= link_to "##{hashtag.text}", hashtag_path(hashtag.text) %>
       <% end %>
     </div>
 

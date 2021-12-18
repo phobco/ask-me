@@ -1,5 +1,5 @@
 <div class="buffer-both">
-  <h1 class="title-medium-white"><%= "#{t('hashtags.questions')}: #{@hashtag.text}" %></h1>
+  <h1 class="title-medium-white"><%= "#{t('hashtags.questions')}: ##{@hashtag.text}" %></h1>
   <div class="questions-list buffer-both">
     <% @questions.each do |question| %>
       <%= render partial: 'questions/question', object: question %>
