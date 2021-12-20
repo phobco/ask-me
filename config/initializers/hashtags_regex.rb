@@ -1,1 +1,0 @@
-HASHTAGS_REGEX = /#[[:word:]-]+/
