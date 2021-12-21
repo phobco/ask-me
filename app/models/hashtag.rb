@@ -6,5 +6,5 @@ class Hashtag < ApplicationRecord
   
   validates :text, presence: true
 
-  scope :with_questions, -> { joins(:questions).where.not(questions: { id: nil }) }
+  scope :with_questions, -> { joins(:questions) }
 end
