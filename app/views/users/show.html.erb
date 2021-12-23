@@ -63,9 +63,7 @@
   <div class="column-3-4">
     <div class="user-questions buffer-both">
       <div class="questions-list">
-        <% @questions.each do |question| %>
-          <%= render partial: 'questions/question', object: question %>
-        <% end %>
+        <%= render @questions %>
       </div>
     </div>
   </div>
