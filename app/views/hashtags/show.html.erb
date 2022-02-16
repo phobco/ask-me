@@ -1,5 +1,5 @@
 <div class="buffer-both">
-  <h1 class="title-medium-white"><%= "#{t('hashtags.questions')}: ##{@hashtag.text}" %></h1>
+  <%= content_tag(:h1, t('hashtags.questions', hashtag: @hashtag.text), class: 'title-medium-white')  %>
   <div class="questions-list buffer-both">
     <%= render @questions %>
   <div>

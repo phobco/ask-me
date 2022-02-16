@@ -52,4 +52,4 @@ ru:
     other: неотвеченные
   
   hashtags:
-    questions: 'Вопросы с хештегом'
+    questions: 'Вопросы с хештегом #%{hashtag}'
