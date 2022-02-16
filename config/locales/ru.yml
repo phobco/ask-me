@@ -9,6 +9,12 @@ ru:
         password: Пароль
         password_confirmation: Подтверждение пароля
   
+  app:
+    title: Хорошие вопросы
+    exit: Выйти
+    sign_up: Зарегистрироваться
+    log_in: Войти
+
   controllers:
     application:
       access_denied: Вам сюда нельзя!

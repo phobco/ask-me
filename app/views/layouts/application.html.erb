@@ -1,54 +1,51 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="ru">
+<head>
   <meta charset="UTF-8">
-    <title>Хорошие вопросы</title>
+    <title><%= t('app.title') %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
   </head>
-
   <body>
 
-  <div class="header">
-    <div class="container">
-      <div class="header-logo">
-        <h1 class="header-title"><%= link_to "Хорошие вопросы", root_path %></h1>
-      </div>
-
-      <div class="header-nav">
-        <% if current_user %>
-          <%= link_to "@#{current_user.username}", user_path(current_user) %>
-          <%= link_to 'Выйти', session_path, data: {method: :delete} %>
-        <% else %>
-          <%= link_to 'Зарегистрироваться', new_user_path,
-            class: 'button button-light button-small' %>
-          <%= link_to 'Войти', new_session_path,
-            class: 'button button-light button-small' %>
-        <% end %>
-      </div>
-      
-    </div>
-  </div>
-
-  <div class="content">
-    <div class="container">
-      <% if flash.any? %>
-        <div class="content-wrapper buffer-both">
-          <% flash.each do |name, message| %>
-            <%= content_tag :div, message, class: "flash-#{name}" %>
+    <div class="header">
+      <div class="container">
+        <div class="header-logo">
+          <%= content_tag(:h1, link_to(t('app.title'), root_path), class: 'header-title') %>
+        </div>
+        <div class="header-nav">
+          <% if current_user %>
+            <%= link_to "@#{current_user.username}", user_path(current_user) %>
+            <%= link_to t('app.exit'), session_path, data: { method: :delete } %>
+          <% else %>
+            <%= link_to t('app.sign_up'), new_user_path,
+              class: 'button button-light button-small' %>
+            <%= link_to t('app.log_in'), new_session_path,
+              class: 'button button-light button-small' %>
           <% end %>
         </div>
-      <% end %>
-
-      <%= yield %>
+      </div>
     </div>
-  </div>
 
+    <div class="content">
+      <div class="container">
+        <% if flash.any? %>
+          <div class="content-wrapper buffer-both">
+            <% flash.each do |name, message| %>
+              <%= content_tag :div, message, class: "flash-#{name}" %>
+            <% end %>
+          </div>
+        <% end %>
+
+        <%= yield %>
+      </div>
+    </div>
   </body>
-
 </html>
