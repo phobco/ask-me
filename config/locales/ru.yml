@@ -64,6 +64,13 @@ ru:
     question:
       are_you_sure: Точно удалить вопрос?
   
+  sessions:
+    new:
+      login: Логин (email)
+      log_in: Войти
+      log_in_on_site: Войти на сайт
+      password: Пароль
+
   unanswered:
     zero: неотвеченных
     one: неотвеченный
