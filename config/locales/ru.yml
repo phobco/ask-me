@@ -8,21 +8,42 @@ ru:
         background_color: Цвет фона
         password: Пароль
         password_confirmation: Подтверждение пароля
+  
+  controllers:
+    application:
+      access_denied: Вам сюда нельзя!
+    questions:
+      question_asked: Вопрос задан
+      question_saved: Вопрос сохранён
+      question_deleted: Вопрос удалён
+    sessions:
+      logged_in: Вы успешно залогинились
+      logged_out: Вы разлогинились, приходите ещё!
+      wrong_email_or_password: Неправильная почта или пароль
+    users:
+      account_deleted: 'Ваш аккаунт был удалён :('
+      already_logged_in: Вы уже залогинены
+      data_updated: Данные обновлены
+      welcome: 'Добро пожаловать, %{username}!'
+
   forms:
     views:
       password_info: Если не хотите менять пароль — оставьте эти поля пустыми!
+  
   question:
     zero: вопросов
     one: вопрос
     few: вопроса
     many: вопросов
     other: вопросы
+  
   answer:
     zero: ответов
     one: ответ
     few: ответа
     many: ответов
     other: ответы
+  
   unanswered:
     zero: неотвеченных
     one: неотвеченный
