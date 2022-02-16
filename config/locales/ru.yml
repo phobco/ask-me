@@ -77,3 +77,26 @@ ru:
     few: неотвеченных
     many: неотвеченных
     other: неотвеченные
+
+  users:
+    edit:
+      are_you_sure: Вы действительно хотите удалить свой аккаунт?
+      delete_account: Удалить аккаунт
+      edit_profile: Править профиль
+      save: Сохранить
+    index:
+      our_users: Наши пользователи
+    new:
+      join_to_us: Присоединяйся к нам!
+      login: Логин (email)
+      name: Имя
+      nickname: Никнейм
+      password: Пароль
+      password_confirmation: Пароль ещё раз
+      sign_up: Зарегистрироваться
+    show:
+      ask_me: Спроси меня
+      ask_question: Задать вопрос
+      alt: '[Фото]'
+      edit_profile: Редактировать профиль
+      your_question_for: 'Ваш вопрос для @%{username}'

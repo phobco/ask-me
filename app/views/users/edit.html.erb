@@ -1,5 +1,5 @@
 <div class="container content-wrapper buffer-both">
-  <h1 class="title-medium">Править профиль</h1>
+  <%= content_tag(:h2, t('.edit_profile'), class: 'title-medium') %>
 
   <div class="column-1-2">
     <%= form_for(@user) do |f| %>
@@ -48,9 +48,9 @@
       </div>
 
       <div class="form-action buffer-top">
-        <%= f.submit 'Сохранить', class: 'button button-dark button-small' %>
-        <%= link_to 'Удалить аккаунт', user_path(@user), class: 'delete button button-red button-small',
-          method: :delete, data: {confirm: 'Вы действительно хотите удалить свой аккаунт?'} %>
+        <%= f.submit t('.save'), class: 'button button-dark button-small' %>
+        <%= link_to t('.delete_account'), user_path(@user), class: 'delete button button-red button-small',
+          method: :delete, data: {confirm: t('.are_you_sure')} %>
       </div>
     <% end %>
 

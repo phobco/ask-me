@@ -1,7 +1,5 @@
 <div class="content-wrapper buffer-both text-center">
-  <div class="buffer-both">
-    <h1 class="title-medium">Наши пользователи</h1>
-  </div>
+  <%= content_tag(:div, content_tag(:h2, t('.our_users'), class: 'title-medium'), class: 'buffer-both') %>
 
   <% @users.each do |user| %>
       <div class="users-list-item">
