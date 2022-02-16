@@ -4,7 +4,7 @@
       <div class="form-errors">
         <ul>
           <% @question.errors.full_messages.each do |message| %>
-            <li class="form-error-message"><%= message %></li>
+            <%= content_tag(:li, message, class: 'form-error-message') %>
           <% end %>
         </ul>
       </div>
@@ -13,13 +13,13 @@
     <%= f.hidden_field :user_id %>
 
     <div class="form-field">
-      <%= f.label :text, 'Вопрос', class: 'form-label' %>
+      <%= f.label :text, t('.question'), class: 'form-label' %>
       <%= f.text_area :text, class: 'form-textarea' %>
     </div>
 
     <% if current_user.present? && current_user == @question.user %>
       <div class="form-field">
-        <%= f.label :answer, 'Ответ', class: 'form-label' %>
+        <%= f.label :answer, t('.answer'), class: 'form-label' %>
         <%= f.text_area :answer, class: 'form-textarea' %>
       </div>
     <% end %>
@@ -27,9 +27,9 @@
     <%= recaptcha_tags unless current_user.present? %>
 
     <div class="form-action buffer-both">
-      <%= f.submit 'Сохранить', class: 'button button-dark button-small' %>
+      <%= f.submit t('.save'), class: 'button button-dark button-small' %>
       или
-      <%= link_to "вернуться", user_path(@question.user) %>
+      <%= link_to t('.back'), user_path(@question.user) %>
     </div>
   <% end %>
 </div>

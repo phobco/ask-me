@@ -2,18 +2,25 @@ ru:
   activerecord:
     attributes:
       user:
-        username: Никнейм
-        name: Имя пользователя
         avatar_url: URL аватарки
         background_color: Цвет фона
+        name: Имя пользователя
         password: Пароль
         password_confirmation: Подтверждение пароля
-  
+        username: Никнейм
+
   app:
-    title: Хорошие вопросы
     exit: Выйти
-    sign_up: Зарегистрироваться
     log_in: Войти
+    sign_up: Зарегистрироваться
+    title: Хорошие вопросы
+
+  answer:
+    zero: ответов
+    one: ответ
+    few: ответа
+    many: ответов
+    other: ответы
 
   controllers:
     application:
@@ -36,6 +43,9 @@ ru:
     views:
       password_info: Если не хотите менять пароль — оставьте эти поля пустыми!
   
+  hashtags:
+    questions: 'Вопросы с хештегом #%{hashtag}'
+
   question:
     zero: вопросов
     one: вопрос
@@ -43,12 +53,12 @@ ru:
     many: вопросов
     other: вопросы
   
-  answer:
-    zero: ответов
-    one: ответ
-    few: ответа
-    many: ответов
-    other: ответы
+  questions:
+    form:
+      answer: Ответ
+      back: вернуться
+      save: Сохранить
+      question: Вопрос
   
   unanswered:
     zero: неотвеченных
@@ -56,6 +66,3 @@ ru:
     few: неотвеченных
     many: неотвеченных
     other: неотвеченные
-  
-  hashtags:
-    questions: 'Вопросы с хештегом #%{hashtag}'
