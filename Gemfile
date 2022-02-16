@@ -5,9 +5,12 @@ ruby '2.7.4'
 
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'puma', '~> 5.0'
+
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
+
 gem 'rails-i18n', '~> 6.0.0'
+
 gem 'uglifier'
 gem 'rails_12factor'
 gem "validate_url"
@@ -18,7 +21,7 @@ group :production do
 end
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug'
   gem 'sqlite3', '~> 1.4'
 end
 
