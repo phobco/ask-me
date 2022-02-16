@@ -54,11 +54,15 @@ ru:
     other: вопросы
   
   questions:
+    edit:
+      question: Вопрос
     form:
       answer: Ответ
       back: вернуться
       save: Сохранить
       question: Вопрос
+    question:
+      are_you_sure: Точно удалить вопрос?
   
   unanswered:
     zero: неотвеченных
