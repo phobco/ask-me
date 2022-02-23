@@ -22,7 +22,7 @@
     </div>
 
     <% if question.author.present? %>
-      <p>от: <%= link_to "@#{question.author.username}", user_path(question.author_id) %></p>
+      <p>от: <%= link_to "@#{question.author.username}", user_path(question.author_id), style: "color: #{question.author.background_color}" %></p>
     <% end %>
   </div>
 
