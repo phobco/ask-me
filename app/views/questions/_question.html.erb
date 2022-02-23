@@ -17,7 +17,7 @@
 
     <div class="buffer-top">
       <% question.hashtags.each do |hashtag| %>
-        <%= link_to "##{hashtag.text}", hashtag_path(hashtag.text) %>
+        <%= link_to "##{hashtag.text}", hashtag_path(hashtag.text), class: 'hashtag' %>
       <% end %>
     </div>
 
