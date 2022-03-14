@@ -4,7 +4,7 @@
 
 ### About
 
-Ask-me is an application where you can ask each other any questions and get answers, similar to the popular ask.fm. The user can add an avatar and change the background color of the profile. On the user page, you can leave questions and answer them. When adding a question, the algorithm looks for hashtags starting with "#", changes color and makes them clickable. Clicking on a hashtag takes you to a page with questions from all users with that hashtag. The hashtags of all users are displayed on the main page.
+Ask-me is an application where you can ask each other any questions and get answers, similar to the popular ask.fm. The user can add an avatar and change the background color of the profile. On the user page you can leave questions and answer them. When adding a question the algorithm looks for hashtags starting with "#", changes color and makes them clickable. Clicking on a hashtag takes you to a page with questions from all users with that hashtag. The hashtags of all users are displayed on the main page.
 
 [`reCAPTCHA`](https://www.google.com/recaptcha/about/) is used for spam protection.
 
